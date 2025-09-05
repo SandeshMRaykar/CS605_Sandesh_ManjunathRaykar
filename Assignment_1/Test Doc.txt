@@ -1,0 +1,32 @@
+Manual Test Cases
+
+Arithmetic Operations
+1) Add : 
+    Input - 5, 3
+    Expected Output - 6.0
+    Observed Output - 6.0
+
+2) Subtract: 
+    Input - 2, 5
+    Expected Output -  -3.0
+    Observed Output -  -3.0
+
+3) Multiply: 
+    Input - 9, 6
+    Expected Output - 54.0
+    Observed Output - 54.0
+
+4) Divide: 
+    Input - 4, 0
+    Expected Output - Error with option to enter a valid input
+    Observed Output - Error! Divide by zero is not allowed.
+
+5) Select an operation:
+     Input - 5
+     Expected output - Error with option to enter a valid input
+     Observed Output - Ivalid Choice ! Enter a number between 1 to 4
+
+6) Do you want to perform another calculation (yes/no) : 
+    Input - "yeS", "YES", "yes", "Yes", "No", "nO", "NO", "no"
+    Expected Output - Should accept all variatons as Yes\No (case-insensitive).
+    Observed Output - It is accepting all the variations of yes\no.
