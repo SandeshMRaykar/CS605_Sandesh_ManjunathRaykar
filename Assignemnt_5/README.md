@@ -25,12 +25,12 @@ BinarySearchTree
 Manages the tree structure 
 
 Methods : 
-__init__ : Initializes the tree with an empty root
+__init__: Initializes the tree with an empty root
 insert(name, phone_number): Inserts a new contact into the correct position based on the name's lexicographical order
-search(name) :  Returns the phone number associated with the given `name` (key). Returns `None` if the name is not found
+search(name) :  Returns the phone number associated with the given name (key). Returns None if the name is not found
 inorder_traversal() : Performs an in-order traversal of the tree and prints all contact names and phone numbers in alphabetically sorted order
-delete(name) : Removes the node associated with the given `name`. Handles all three deletion cases: no children, one child, and two children
-Returns `True` if deletion was successful, `False` otherwise. 
+delete(name) : Removes the node associated with the given name. Handles all three deletion cases: no children, one child, and two children
+Returns True if deletion was successful, False otherwise. 
 
 Example :
 
