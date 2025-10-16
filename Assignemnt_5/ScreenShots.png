@@ -1,1 +1,21 @@
+Initial In-Order Traversal :
+In-Order Traversal :
+Alice: 652-9584
+Bob: 827-2345
+Charlie: 415-3213
+David: 278-4567
 
+Deletion :
+Deleting Charlie: True
+Deleting Frank: False
+Deleting Alise: False
+
+In-Order Traversal After Deletions :
+In-Order Traversal :
+Alice: 652-9584
+Bob: 827-2345
+David: 278-4567
+
+Verifying Search After Deletion :
+Searching for Alice: 652-9584
+Searching for Charlie: None
