@@ -1,1 +1,68 @@
+Test Case 1: Inserting Nodes and In-Order Traversal
+Description: This test verifies that the insert method places nodes in the correct position according to the lexicographical order of names. The inorder_traversal method is then used to confirm that all names are stored in the correct sorted order.
 
+Code:
+bst = BinarySearchTree()
+bst.insert("Bob", "555-2345")
+bst.insert("Charlie", "555-3456")
+bst.insert("Alice", "555-1234")
+bst.insert("David", "555-4567")
+bst.inorder_traversal()
+Expected Output: The names should be printed in alphabetical order, demonstrating that the BST node content is maintained correctly.
+
+Test Case 1: Insertion & In-Order Traversal
+Running in-order traversal to verify sorted order:
+Alice: 555-1234
+Bob: 555-2345
+Charlie: 555-3456
+David: 555-4567
+
+Test Case 2: Searching for Nodes
+Description: This test checks the search method's ability to find phone numbers for names that exist in the tree and to correctly handle names that do not.
+
+Code:
+print("Test Case 2: Searching for Nodes")
+print(f"Searching for 'Alice': {bst.search('Alice')}")
+print(f"Searching for 'David': {bst.search('David')}")
+print(f"Searching for 'Frank' (non-existent): {bst.search('Frank')}")
+Expected Output: The search should return the correct phone numbers for existing names and None for a name that is not in the tree.
+
+Searching for 'Alice': 555-1234
+Searching for 'David': 555-4567
+Searching for 'Frank' (non-existent): None
+
+Test Case 3: Node Deletion
+Description: This test validates the delete method by covering the three main deletion scenarios:
+Deleting a Leaf Node: A node with no children .
+Deleting a Node with One Child: A node with only a left or right child.
+Deleting a Node with Two Children: in-order successor must be found and used to replace the deleted node.
+Deleting a Non-Existent Node: The method should fail gracefully.
+
+Code:
+print("Test Case 3: Node Deletion")
+1. Delete 'Alice'
+print(f"Deleting 'Alice': {bst.delete('Alice')}")
+2. Delete 'Charlie'
+print(f"Deleting 'Charlie': {bst.delete('Charlie')}")
+3. Attempt to delete a non-existent name
+print(f"Attempting to delete 'Frank' (non-existent): {bst.delete('Frank')}")
+print("\nRunning in-order traversal after all deletions:")
+bst.inorder_traversal()
+
+print("\nVerifying search for deleted and existing nodes:")
+print(f"Searching for 'Charlie': {bst.search('Charlie')}")
+print(f"Searching for 'David' (successor of Charlie): {bst.search('David')}")
+Expected Output: The delete method should return True for each successful deletion and False for the non-existent name. The final traversal and search results should confirm that the specified nodes were successfully removed while the tree structure and remaining nodes are intact.
+
+Deleting 'Alice': True
+Deleting 'Charlie': True
+Attempting to delete 'Frank' (non-existent): False
+
+Running in-order traversal after all deletions:
+Alice: 555-1234
+Bob: 555-2345
+David: 555-4567
+
+Verifying search for deleted and existing nodes:
+Searching for 'Charlie': None
+Searching for 'David' : 555-4567
